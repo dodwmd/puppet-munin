@@ -59,7 +59,7 @@ class munin::params {
   }
 
   $restart_or_reload = $::operatingsystem ? {
-    /(?i:Debian)/ => 'restart',
+    /(?i:Ubuntu|Debian|Mint)/ => 'restart',
     default       => 'reload',
   }
 
